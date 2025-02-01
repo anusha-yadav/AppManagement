@@ -53,6 +53,13 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Deploy to Staging Slot
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: "AppManagement"
+          slot-name: "staging"   
+          package: publish
+
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
