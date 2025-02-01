@@ -30,7 +30,7 @@ jobs:
         run: dotnet test --configuration Release --no-restore --verbosity normal
 
       - name: Publish Application
-        run: dotnet publish AppManagement.csproj/AppManagement.csproj -c Release -o publish
+        run: dotnet publish AppManagement/AppManagement.csproj -c Release -o publish
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
